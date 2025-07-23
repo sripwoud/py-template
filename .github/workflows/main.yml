@@ -58,4 +58,5 @@ jobs:
             "check" = { depends = "check:*" }
             [tools]
             dprint = "latest"
+            ruff = "latest"
       - run: mise r check

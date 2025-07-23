@@ -1,7 +1,7 @@
 {
   "exec": {
     "commands": [{
-      "command": "uv run ruff format --stdin-filename={{file_path}} -",
+      "command": "ruff format --stdin-filename={{file_path}} -",
       "exts": ["py"],
     }],
   },

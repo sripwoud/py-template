@@ -73,6 +73,7 @@ main() {
   mise install && log "✅ Installed dev tools and runtimes"
   use_convco_as_git_editor_only_on_main
   hk install && log "✅ Configured git hooks"
+  uv sync && log "✅ Installed python dependencies"
 }
 
 main

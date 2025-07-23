@@ -54,8 +54,9 @@ jobs:
         with:
           mise_toml: |
             [tasks]
-            "check:format" = { run = "dprint check --excludes mise.toml" }
-            "check" = { depends = "check:*" }
+            "check-format" = { run = "dprint check --excludes mise.toml" }
+            "check-lint" = { run = "ruff check" }
+            "check" = { depends = "check-*" }
             [tools]
             dprint = "latest"
             ruff = "latest"

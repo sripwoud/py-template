@@ -1,11 +1,11 @@
 amends "package://github.com/jdx/hk/releases/download/v1.1.1/hk@1.1.1#/Config.pkl"
 
 local linters  = new Mapping<String, Step> {
-  ["fmt"]  {
+  ["dprint"]  {
     fix = "dprint fmt"
     stage = "*"
   }
-  ["lint"] {
+  ["ruff"] {
     check = "ruff check"
   }
 }
@@ -14,8 +14,7 @@ hooks {
   ["pre-commit"] {
     fix = true
     stash = "git"
-    steps {
-      ...linters
-    }
+    steps = linters
+    
   }
 }
